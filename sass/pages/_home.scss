@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+  padding: 0 12rem;
+
+  @include respond(tab-land) {
+    padding: 0 7rem;
+    // padding: 0 6.4rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 0 4rem;
+  }
+}
+
+.section-overview {
+  height: 30rem;
+  background-color: $color-secondary;
+}

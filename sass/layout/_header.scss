@@ -1,0 +1,309 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 70rem;
+  height: min(100vh, 70rem);
+  overflow-x: hidden;
+  background-color: $color-primary;
+  border-bottom: 1px solid $color-grey-dark-3;
+
+  // background-color: red;
+
+  @include respond(tab-port-md) {
+    height: auto;
+  }
+
+  .main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding-left: 12rem;
+    background-color: $color-primary;
+
+    // background-color: rgb(74, 74, 23);
+
+    @include respond(tab-land) {
+      padding-left: 7rem;
+      // padding-left: 6.4rem;
+    }
+
+    @include respond(tab-port) {
+      padding-left: 4rem;
+    }
+
+    @include respond(tab-port-md) {
+      display: block;
+      padding-inline: 0;
+    }
+
+    &__heading {
+      &--primary {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: $color-white;
+
+        // background-color: grey;
+        // color: yellow;
+      }
+
+      &--tertiary {
+        position: relative;
+        width: 100%;
+        height: 10rem;
+
+        // background-color: blue;
+
+        @include respond(tab-port-md) {
+          position: static;
+          margin-top: 4rem;
+        }
+
+        @include respond(phone) {
+          height: 8rem;
+        }
+
+        .heading--tertiary {
+          position: absolute;
+          top: 2rem;
+          right: 8%;
+          color: #fff;
+
+          // background-color: cadetblue;
+
+          @include respond(tab-land) {
+            right: 2%;
+          }
+
+          @include respond(tab-port-md) {
+            position: static;
+            text-align: center;
+          }
+
+          .hr-innovation {
+            display: inline-block;
+            position: relative;
+
+            // background-color: orange;
+
+            &::after {
+              position: absolute;
+              top: 90%;
+              left: 50%;
+              transform: translateX(-50%);
+              content: "";
+              display: block;
+              width: 97%;
+              height: 1.5rem;
+              background-image: url(/img/underline.png);
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center center;
+              z-index: 9;
+
+              // background-color: lightblue;
+            }
+          }
+        }
+      }
+    }
+
+    &__content {
+      display: flex;
+      height: 100%;
+
+      // background-color: orange;
+
+      @include respond(tab-port-md) {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+      }
+    }
+
+    &__overview {
+      flex: 1;
+      display: grid;
+      align-items: center;
+
+      // background-color: grey;
+
+      @include respond(tab-port-md) {
+        width: 100%;
+      }
+
+      .overview__content {
+        // background-color: teal;
+
+        @include respond(tab-port-md) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      .heading--primary {
+        margin-bottom: 1rem;
+        // background-color: red;
+
+        @include respond(tab-port-md) {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        &-1 {
+          position: relative;
+          // background-color: green;
+
+          &::after {
+            position: absolute;
+            bottom: 70%;
+            left: 86%;
+            content: "";
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            background-image: url(/img/creative.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            z-index: 9;
+
+            // background-color: red;
+
+            @include respond(tab-port-md) {
+              bottom: 75%;
+              left: 84%;
+              width: 5rem;
+              height: 5rem;
+            }
+
+            @include respond(tab-port-md) {
+              width: 3.5rem;
+              height: 3.5rem;
+            }
+          }
+        }
+
+        &-2 {
+          position: relative;
+          // background-color: orange;
+
+          @include respond(tab-port-md) {
+            margin-left: -9rem;
+          }
+
+          &::after {
+            position: absolute;
+            bottom: 0.5rem;
+            left: 101%;
+            content: "";
+            display: block;
+            width: 5rem;
+            height: 5rem;
+            background-image: url(/img/chain.png);
+            background-size: cover;
+            z-index: 9;
+
+            // background-color: red;
+
+            @include respond(phone) {
+              bottom: 0rem;
+              width: 4rem;
+              height: 4rem;
+            }
+          }
+
+          &::before {
+            position: absolute;
+            bottom: 0.5rem;
+            left: 113%;
+            content: "";
+            display: block;
+            width: 5rem;
+            height: 5rem;
+            background-image: url(/img/spark.png);
+            background-size: cover;
+            z-index: 9;
+
+            // background-color: blue;
+
+            @include respond(tab-port-md) {
+              left: 117%;
+              width: 4.2rem;
+              height: 4.2rem;
+            }
+
+            @include respond(phone) {
+              left: 115%;
+              bottom: 0.3rem;
+              width: 3.2rem;
+              height: 3.2rem;
+            }
+
+            @include respond(phone-md) {
+              left: 120%;
+            }
+          }
+        }
+      }
+
+      .heading--primary span {
+        color: purple;
+        // background-color: lightblue;
+      }
+
+      .paragraph {
+        color: $color-white;
+        font-size: 1.8rem;
+        line-height: 1.5;
+
+        // background-color: olivedrab;
+
+        @include respond(tab-port-md) {
+          text-align: center;
+          width: 100%;
+        }
+
+        @include respond(phone-md) {
+          font-size: 1.6rem;
+          padding-inline: 2rem;
+        }
+      }
+
+      .time {
+        display: flex;
+        gap: 4rem;
+
+        // background-color: teal;
+
+        @include respond(tab-port-md) {
+          gap: 3rem;
+          margin-bottom: 4rem;
+        }
+
+        @include respond(phone) {
+          gap: 2rem;
+        }
+
+        &__number {
+          font-family: "Unica One", cursive;
+          font-weight: 500;
+          font-size: 6.4rem;
+
+          @include respond(phone) {
+            font-size: 5.4rem;
+          }
+        }
+
+        &__desc {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 500;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}

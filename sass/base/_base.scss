@@ -1,0 +1,47 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (max-width: 75em) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+
+strong {
+  font-weight: 550;
+}
+
+*:focus {
+  // outline: 4px dotted $color-secondary;
+  // outline-offset: 8px;
+  // box-shadow: 0 0 0 0.8rem rgba($color-secondary, 0.5);
+
+  outline: none;
+}
+
+::selection {
+  background-color: $color-tertiary;
+  color: $color-white;
+}
+
+.whole {
+  max-width: 156rem;
+  margin: 0 auto;
+
+  background-color: $color-primary;
+}

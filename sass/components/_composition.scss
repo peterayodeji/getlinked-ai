@@ -1,0 +1,30 @@
+.composition {
+  flex: 1;
+  background-color: $color-primary;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(rgb(21, 14, 40), 0.2),
+      rgba(rgb(21, 14, 40), 0.2)
+    ),
+    url(/img/metrix\ 1.png), url(/img/Image\ 1.png),
+    url(/img/man-wearing-smart-glasses-touching-virtual-screen\ 1.png);
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-blend-mode: lighten;
+  // isolation: isolate;
+
+  @include respond(tab-port-md) {
+    flex: auto;
+    background-position: center bottom;
+    width: 100%;
+    height: 50rem;
+
+    // background-color: lightblue;
+
+    @include respond(phone-md) {
+      background-size: cover;
+    }
+  }
+}
