@@ -21,7 +21,6 @@
 
 .overview {
   display: flex;
-
   // background-color: rgb(73, 73, 122);
 
   @include respond(tab-port-md) {
@@ -31,11 +30,39 @@
   }
 
   &__img {
+    position: relative;
     flex: 1;
+
     // background-color: teal;
 
     img {
       width: 100%;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: -8px;
+      left: 100%;
+      transform: translateX(-50%);
+      content: "";
+      display: block;
+      width: 5rem;
+      height: 5rem;
+      background-image: url(/img/arrow.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 9;
+
+      // background-color: red;
+
+      @include respond(tab-port-md) {
+        top: 102%;
+        left: 50%;
+        width: 4rem;
+        height: 4rem;
+
+        // background-color: gold;
+      }
     }
   }
 
@@ -61,10 +88,6 @@
     .heading--secondary {
       @include respond(tab-port-md) {
         margin-top: 8rem;
-      }
-
-      @include respond(phone) {
-        margin-top: 5rem;
       }
 
       span {
