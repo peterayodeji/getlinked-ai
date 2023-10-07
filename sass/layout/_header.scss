@@ -251,15 +251,11 @@
       }
 
       .heading--primary span {
-        color: purple;
+        color: $color-tertiary;
         // background-color: lightblue;
       }
 
       .paragraph {
-        color: $color-white;
-        font-size: 1.8rem;
-        line-height: 1.5;
-
         // background-color: olivedrab;
 
         @include respond(tab-port-md) {
@@ -268,7 +264,6 @@
         }
 
         @include respond(phone-md) {
-          font-size: 1.6rem;
           padding-inline: 2rem;
         }
       }

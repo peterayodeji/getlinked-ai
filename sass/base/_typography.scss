@@ -45,9 +45,22 @@ body {
   }
 
   &--secondary {
-    margin-bottom: 4.8rem;
-    font-size: 3.6rem;
-    letter-spacing: -0.5px;
+    font-family: "Clash Display", sans-serif;
+    font-size: 3.4rem;
+    line-height: 1.2;
+    margin-bottom: 2.3rem;
+
+    @include respond(tab-land) {
+      font-size: 3.2rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 3rem;
+    }
+
+    @include respond(phone-md) {
+      font-size: 2.3rem;
+    }
   }
 
   &--tertiary {
@@ -82,7 +95,14 @@ body {
 }
 
 .paragraph {
-  font-size: $default-font-size;
+  font-family: "Montserrat", sans-serif;
+  color: $color-white;
+  font-size: 1.8rem;
+  line-height: 1.5;
+
+  @include respond(tab-land) {
+    font-size: 1.7rem;
+  }
 
   &:not(:last-child) {
     margin-bottom: 3rem;
