@@ -1,0 +1,9 @@
+.flex {
+  display: flex;
+
+  @include respond(tab-port-md) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
