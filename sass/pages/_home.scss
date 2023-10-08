@@ -105,6 +105,7 @@
   }
 
   &__img {
+    position: relative;
     flex: 1;
     z-index: 1;
 
@@ -112,6 +113,43 @@
 
     img {
       width: 100%;
+    }
+
+    &::after {
+      position: absolute;
+      top: 17%;
+      left: 60%;
+      // left: 2rem;
+      // transform: translateX(-50%);
+      content: "";
+      display: block;
+      width: 12rem;
+      height: 12rem;
+      background-image: url(/img/ellipse.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -1;
+
+      // background-color: red;
+
+      @media only screen and (max-width: 87.5em) {
+        width: 11rem;
+        height: 11rem;
+      }
+
+      @include respond(tab-land) {
+        width: 10rem;
+        height: 10rem;
+      }
+
+      @include respond(tab-port) {
+        width: 9rem;
+        height: 9rem;
+      }
+
+      @include respond(tab-port-md) {
+        display: none;
+      }
     }
   }
 }
