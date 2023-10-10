@@ -191,16 +191,54 @@
   }
 
   &__img {
+    position: relative;
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 
     // background-color: rgb(27, 77, 94);
 
     img {
       width: 100%;
       display: block;
+    }
+
+    &::after {
+      position: absolute;
+      top: 10%;
+      left: 13%;
+      content: "";
+      display: block;
+      width: 12rem;
+      height: 12rem;
+      background-image: url(/img/ellipse.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -1;
+
+      // background-color: red;
+
+      @media only screen and (max-width: 92.5em) {
+        top: 15%;
+      }
+      @media only screen and (max-width: 87.5em) {
+        top: 18%;
+      }
+      @media only screen and (max-width: 75em) {
+        top: 15%;
+      }
+      @media only screen and (max-width: 67.6em) {
+        top: 18%;
+      }
+      @media only screen and (max-width: 62.5em) {
+        top: 20%;
+      }
+
+      @include respond(tab-port-md) {
+        display: none;
+      }
     }
   }
 }
