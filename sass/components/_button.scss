@@ -1,10 +1,6 @@
 .btn {
   &:link,
   &:visited {
-    padding: 1.5rem 4.2rem;
-    font-size: 1.8rem;
-
-    // background-color: $color-secondary;
     background-image: linear-gradient(
       to right,
       $color-tertiary,
@@ -23,12 +19,12 @@
   }
 
   &--big {
+    padding: 1.5rem 4.2rem;
     font-size: 1.8rem;
-    padding: 1.6rem 3.2rem;
   }
 
   &--small {
-    font-size: 1.4rem;
-    padding: 0.8rem 1.2rem;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
   }
 }

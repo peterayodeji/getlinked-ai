@@ -46,16 +46,16 @@ body {
 
   &--secondary {
     font-family: "Clash Display", sans-serif;
-    font-size: 3.4rem;
+    font-size: 3.2rem;
     line-height: 1.2;
     margin-bottom: 2.3rem;
 
     @include respond(tab-land) {
-      font-size: 3.2rem;
+      font-size: 3rem;
     }
 
     @include respond(tab-port) {
-      font-size: 3rem;
+      font-size: 2.6rem;
     }
 
     @include respond(phone-md) {
@@ -97,14 +97,18 @@ body {
 .paragraph {
   font-family: "Montserrat", sans-serif;
   color: $color-white;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.5;
 
   @include respond(tab-land) {
+    font-size: 1.5rem;
+  }
+
+  @include respond(tab-port-md) {
     font-size: 1.7rem;
   }
 
   &:not(:last-child) {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 }
