@@ -243,3 +243,38 @@
     }
   }
 }
+
+// - SECTION FAQ
+.section-faq {
+  padding-block: 8rem;
+  background-color: $color-primary;
+
+  // background-color: rgb(146, 105, 65);
+}
+
+.faq {
+  &__info {
+    flex: 1;
+    align-self: flex-start;
+    margin-right: 4rem;
+
+    // background-color: rgb(116, 89, 107);
+
+    @include respond(tab-port-md) {
+      align-self: center;
+      margin-right: 0;
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__img {
+    flex: 1;
+    align-self: flex-start;
+
+    // background-color: rgb(27, 77, 94);
+
+    img {
+      width: 100%;
+    }
+  }
+}

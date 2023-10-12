@@ -1,0 +1,90 @@
+.faq {
+  &__container {
+    width: 100%;
+    margin-top: 2rem;
+
+    // background-color: rgb(6, 92, 116);
+  }
+
+  &-box {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid $color-secondary;
+    transition: 0.3s ease;
+
+    // background-color: gray;
+
+    @include respond(tab-port-md) {
+      text-align: left;
+    }
+
+    &.active {
+      .faq__body {
+        display: block;
+      }
+
+      .vertical-line {
+        display: none;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 1rem;
+
+    // background-color: darkblue;
+  }
+
+  &__title {
+    flex: 1;
+    margin-right: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+
+    @include respond(tab-port-md) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__body {
+    display: none;
+    padding-block: 1rem;
+
+    // background-color: green;
+  }
+
+  // - FAQ Toggle (plus-minus sign)
+
+  &__toggle {
+    position: relative;
+    height: 1.4rem;
+    width: 1.4rem;
+    cursor: pointer;
+
+    // background-color: red;
+
+    .horizontal-line,
+    .vertical-line {
+      position: absolute;
+      background-color: $color-secondary;
+    }
+
+    .horizontal-line {
+      width: 100%;
+      height: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+
+    .vertical-line {
+      width: 2px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

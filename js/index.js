@@ -8,3 +8,18 @@ btnNavEl.addEventListener("click", function () {
 
   // document.body.classList.toggle("hide-overflow");
 });
+
+// # FAQ
+const toggles = document.querySelectorAll(".faq__toggle");
+const faqs = document.querySelectorAll(".faq-box");
+
+toggles.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    faqs.forEach((faq) => {
+      if (toggle.closest(".faq-box") === faq) return;
+      faq.classList.remove("active");
+    });
+
+    toggle.closest(".faq-box").classList.toggle("active");
+  });
+});
