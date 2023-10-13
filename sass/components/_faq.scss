@@ -39,12 +39,9 @@
   &__title {
     flex: 1;
     margin-right: 2rem;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.5rem;
-    line-height: 1.5;
 
-    @include respond(tab-port-md) {
-      font-size: 1.6rem;
+    &.paragraph {
+      margin-bottom: 0;
     }
   }
 

@@ -263,18 +263,43 @@
     @include respond(tab-port-md) {
       align-self: center;
       margin-right: 0;
-      margin-bottom: 6rem;
+      margin-bottom: 10rem;
     }
   }
 
   &__img {
+    position: relative;
     flex: 1;
     align-self: flex-start;
+    z-index: 1;
 
     // background-color: rgb(27, 77, 94);
 
+    background-image: url("/img/question-svg.svg"), url("/img/question-svg.svg");
+    background-repeat: no-repeat;
+    background-size: 20% 35px;
+    background-position: 7% 7px, 60% 0px;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      transform: translateY(-65%);
+      left: 33%;
+      content: "";
+      display: block;
+      width: 6rem;
+      height: 6rem;
+      background-image: url(/img/question-mark.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -1;
+
+      // background-color: red;
+    }
+
     img {
       width: 100%;
+      margin-top: 2.5rem;
     }
   }
 }
