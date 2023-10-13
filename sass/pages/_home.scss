@@ -230,11 +230,11 @@
       @media only screen and (max-width: 75em) {
         top: 15%;
       }
-      @media only screen and (max-width: 67.6em) {
-        top: 18%;
+      @media only screen and (max-width: 70em) {
+        top: 22%;
       }
-      @media only screen and (max-width: 62.5em) {
-        top: 20%;
+      @media only screen and (max-width: 55em) {
+        top: 27%;
       }
 
       @include respond(tab-port-md) {
