@@ -104,8 +104,16 @@ body {
     font-size: 1.5rem;
   }
 
+  @media only screen and (max-width: 75em) {
+    font-size: 1.6rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: 1.75rem;
+  }
+
   @include respond(tab-port-md) {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
 
   &:not(:last-child) {
