@@ -303,3 +303,37 @@
     }
   }
 }
+
+// - SECTION TIMELINE
+.section-timeline {
+  padding-block: 8rem 14rem;
+  background-color: $color-primary;
+
+  // background-color: rgb(146, 105, 65);
+
+  @include respond(tab-port-md) {
+    padding-block: 8rem;
+  }
+
+  .heading--secondary {
+    text-align: center;
+    // background-color: rebeccapurple;
+  }
+
+  .timeline-intro {
+    width: 35%;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    text-align: center;
+
+    // background-color: rgb(114, 57, 114);
+
+    @include respond(tab-port-md) {
+      width: 70%;
+    }
+
+    @include respond(phone-md) {
+      width: 100%;
+    }
+  }
+}
