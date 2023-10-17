@@ -337,3 +337,77 @@
     }
   }
 }
+
+// - SECTION PRIZES
+.section-prizes {
+  padding-block: 8rem;
+  background-color: $color-primary;
+
+  // background-color: rgb(146, 105, 65);
+}
+
+.prizes {
+  &__header {
+    margin-bottom: 18rem;
+    background-color: $color-primary;
+
+    // background-color: rgb(207, 181, 181);
+
+    @include respond(tab-port-md) {
+      margin-bottom: 4rem;
+    }
+
+    .heading--secondary {
+      span {
+        color: $color-secondary;
+      }
+    }
+
+    &--empty {
+      width: 40%;
+      // background-color: lightblue;
+
+      @include respond(tab-port-md) {
+        display: none;
+      }
+    }
+
+    &--fill {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      // background-color: orange;
+
+      @include respond(tab-port-md) {
+        width: 100%;
+        text-align: center;
+      }
+
+      .header-content {
+        width: 55%;
+        // background-color: yellow;
+
+        @include respond(tab-port-md) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        @include respond(phone) {
+          width: 100%;
+        }
+      }
+
+      // .paragraph {
+      //   background-color: teal;
+      // }
+    }
+  }
+
+  &__graphics {
+    background-color: $color-primary;
+    // background-color: lavender;
+  }
+}

@@ -1,0 +1,233 @@
+.prizes {
+  &__trophy {
+    width: 40%;
+    margin-right: 2rem;
+    transform: translateY(-25%);
+
+    // background-color: green;
+
+    @include respond(tab-port-md) {
+      width: 100%;
+      margin-right: 0;
+      transform: translateY(0);
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__reward {
+    display: flex;
+    width: 60%;
+
+    // background-color: rgb(119, 119, 117);
+
+    @include respond(tab-port-md) {
+      width: 100%;
+      margin-top: 24rem;
+    }
+
+    @include respond(phone) {
+      margin-top: 16rem;
+    }
+
+    @include respond(phone-md) {
+      margin-top: 12rem;
+    }
+
+    &--1,
+    &--2,
+    &--3 {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+
+        @include respond(phone) {
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    &--1,
+    &--3 {
+      // background-color: red;
+
+      .prizes {
+        &__info {
+          position: relative;
+          width: 100%;
+          height: 30rem;
+          border-radius: 7px;
+          box-shadow: inset 0 0 2px 1px $color-secondary;
+
+          // background-color: purple;
+
+          @include respond(phone) {
+            height: 25rem;
+          }
+
+          @include respond(phone-md) {
+            height: 17rem;
+          }
+        }
+
+        &__img {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+
+          img {
+            width: 100%;
+          }
+
+          // background-color: blue;
+        }
+
+        &__details {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 50%;
+
+          // background-color: rgb(121, 214, 121);
+
+          .position {
+            text-align: center;
+            font-size: 3rem;
+            line-height: 0.7;
+            font-weight: bold;
+            margin-bottom: 3rem;
+
+            // background-color: rgb(20, 57, 70);
+
+            @include respond(phone) {
+              font-size: 2.4rem;
+            }
+
+            @include respond(phone-md) {
+              margin-bottom: 2rem;
+            }
+
+            span {
+              font-size: 1.6rem;
+            }
+          }
+
+          .reward {
+            text-align: center;
+            font-size: 2.4rem;
+            font-weight: bold;
+            color: $color-secondary;
+            margin-bottom: 3.5rem;
+
+            // background-color: rgb(43, 106, 199);
+
+            @include respond(phone) {
+              font-size: 2rem;
+            }
+
+            @include respond(phone-md) {
+              font-size: 1.7rem;
+            }
+          }
+        }
+      }
+    }
+
+    &--2 {
+      // background-color: gold;
+
+      .prizes {
+        &__info {
+          position: relative;
+          width: 100%;
+          height: 33rem;
+          border-radius: 7px;
+          box-shadow: inset 0 0 2px 1px $color-secondary-accent;
+
+          // background-color: purple;
+
+          @include respond(phone) {
+            height: 28rem;
+          }
+
+          @include respond(phone-md) {
+            height: 20rem;
+          }
+        }
+
+        &__img {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 110%;
+
+          img {
+            width: 100%;
+          }
+
+          // background-color: rgb(59, 59, 126);
+        }
+
+        &__details {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 50%;
+
+          // background-color: rgb(121, 214, 121);
+
+          .position {
+            text-align: center;
+            font-size: 3rem;
+            line-height: 0.7;
+            font-weight: bold;
+            margin-block: 2rem 5rem;
+
+            // background-color: rgb(20, 57, 70);
+
+            @include respond(tab-port-md) {
+              margin-block: 5rem 3rem;
+            }
+
+            @include respond(phone) {
+              font-size: 2.4rem;
+              margin-block: 1.5rem 2rem;
+            }
+
+            span {
+              font-size: 1.6rem;
+            }
+          }
+
+          .reward {
+            text-align: center;
+            font-size: 2.4rem;
+            font-weight: bold;
+            color: $color-secondary-accent;
+
+            // background-color: rgb(43, 106, 199);
+
+            @include respond(phone) {
+              font-size: 2rem;
+            }
+
+            @include respond(phone-md) {
+              font-size: 1.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
