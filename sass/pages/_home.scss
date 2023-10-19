@@ -411,3 +411,41 @@
     // background-color: lavender;
   }
 }
+
+// - SECTION PARTNERS
+.section-partners {
+  padding-block: 8rem;
+  background-color: $color-primary;
+
+  // background-color: rgb(146, 105, 65);
+
+  .heading--secondary {
+    text-align: center;
+    // background-color: rebeccapurple;
+  }
+
+  .partners-intro {
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    text-align: center;
+
+    // background-color: rgb(114, 57, 114);
+
+    @include respond(tab-land) {
+      width: 50%;
+    }
+
+    @include respond(tab-port) {
+      width: 60%;
+    }
+
+    @include respond(tab-port-md) {
+      width: 80%;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+}
