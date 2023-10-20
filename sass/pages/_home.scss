@@ -449,3 +449,155 @@
     }
   }
 }
+
+// - SECTION PRIVACY
+.section-privacy {
+  padding-block: 12rem 8rem;
+  background-color: $color-primary;
+
+  // background-color: rgb(146, 105, 65);
+
+  @include respond(tab-port-md) {
+    padding-block: 8rem;
+  }
+}
+
+.privacy {
+  // background-color: lightblue;
+
+  &__info {
+    flex: 1;
+    // background-color: rgb(110, 110, 110);
+
+    .heading--secondary {
+      span {
+        color: $color-secondary;
+      }
+    }
+
+    @include respond(tab-port-md) {
+      margin-bottom: 8rem;
+      text-align: center;
+    }
+  }
+
+  &__date {
+    margin-top: -1.8rem;
+    color: #bbb;
+  }
+
+  &__intro {
+    &.paragraph {
+      margin-bottom: 4rem;
+      padding-right: 2rem;
+
+      // background-color: teal;
+
+      @include respond(tab-port-md) {
+        width: 80%;
+        margin-inline: auto;
+      }
+
+      @include respond(phone) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__highlight {
+    padding: 4rem 2rem 4rem 6rem;
+    border-radius: 7px;
+    box-shadow: inset 0 0 2px 1px $color-secondary;
+    background-color: $color-primary;
+
+    @include respond(tab-port-md) {
+      padding: 4rem 2rem 4rem 4rem;
+      text-align: left;
+    }
+
+    @include respond(phone) {
+      padding: 4rem;
+    }
+
+    @include respond(phone-md) {
+      padding: 6rem 2rem;
+    }
+
+    .highlight {
+      &__intro {
+        @include respond(tab-port) {
+          margin-bottom: 3rem;
+          // background-color: teal;
+        }
+
+        @include respond(phone) {
+          text-align: center;
+        }
+      }
+
+      &__licensing {
+        font-weight: 700;
+        color: $color-secondary;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .btn-wrapper {
+      width: 100%;
+      text-align: center;
+
+      // background-color: lavenderblush;
+    }
+  }
+
+  &__img {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: $color-primary;
+    background-image: url(../../img/shield.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    transform: translateY(-6rem);
+
+    // background-color: teal;
+
+    @include respond(tab-land) {
+      background-size: 80%;
+    }
+
+    @include respond(tab-port-md) {
+      flex: auto;
+      height: 80rem;
+      background-size: 70%;
+      transform: translateY(0);
+    }
+
+    @include respond(phone) {
+      flex: 1;
+      background-size: 90%;
+    }
+
+    img {
+      width: 70%;
+
+      @media only screen and (max-width: 67.5em) {
+        width: 90%;
+      }
+
+      @include respond(tab-port) {
+        width: 100%;
+      }
+
+      @include respond(tab-port-md) {
+        width: 70%;
+      }
+
+      @include respond(phone) {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.list {
+  list-style-type: none;
+  // background-color: rgb(112, 71, 91);
+
+  &__item {
+    display: flex;
+    // background-color: teal;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    // .paragraph {
+    //   background-color: gold;
+    // }
+
+    &::before {
+      display: block;
+      content: "";
+      height: 2rem;
+      width: 4rem;
+      margin-right: 1rem;
+
+      // - Custom list-style-type
+      background-image: url(../../img/list-terms-svg.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left center;
+
+      // background-color: red;
+
+      @include respond(phone) {
+        width: 5rem;
+      }
+
+      @include respond(phone-md) {
+        width: 8rem;
+      }
+    }
+  }
+}
