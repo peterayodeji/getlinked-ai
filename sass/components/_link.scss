@@ -1,0 +1,13 @@
+.link {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &:hover,
+  &:active {
+    color: $color-secondary;
+  }
+}

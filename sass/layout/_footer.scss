@@ -1,0 +1,233 @@
+// - FOOTER
+.section-footer {
+  padding-block: 6rem 3rem;
+  background-color: $color-primary;
+
+  // background-color: rgb(146, 105, 65);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 6rem;
+  background-color: $color-primary;
+
+  // background-color: rgb(105, 137, 58);
+
+  @include respond(tab-port-md) {
+    justify-content: space-between;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+    margin-bottom: 4rem;
+    padding-inline: 6rem;
+
+    & > div:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  @include respond(phone-md) {
+    padding-inline: 2rem;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 4rem;
+    margin-bottom: 1rem;
+
+    // background-color: rgb(69, 69, 72);
+
+    .logo {
+      font-size: 3.4rem;
+    }
+  }
+
+  // - ABOUT
+  &__about {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    font-size: 1.3rem;
+
+    // background-color: rgb(124, 114, 114);
+
+    @include respond(tab-port) {
+      font-size: 1.5rem;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
+
+    .about-text {
+      font-size: inherit;
+      line-height: 1.5;
+      margin-bottom: 4rem;
+
+      // background-color: turquoise;
+    }
+
+    .about-links {
+      margin-top: auto;
+      // background-color: red;
+
+      .link {
+        padding-inline: 1rem;
+        font-size: inherit;
+
+        &:not(:last-child) {
+          padding-left: 0;
+          border-right: 2px solid $color-secondary;
+        }
+      }
+    }
+  }
+
+  // - USEFUL LINKS
+  &__links {
+    font-size: 1.3rem;
+    // background-color: rgb(152, 145, 105);
+
+    @include respond(tab-port) {
+      font-size: 1.5rem;
+    }
+
+    .links-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 4rem;
+      margin-bottom: 1rem;
+      font-size: inherit;
+      color: $color-secondary;
+
+      // background-color: red;
+    }
+
+    .useful-links {
+      margin-bottom: 2rem;
+      list-style-type: none;
+
+      // background-color: rgb(69, 78, 78);
+
+      li {
+        font-size: inherit;
+
+        &:not(:last-child) {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+
+    .social {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      // background-color: orange;
+
+      @include respond(phone) {
+        margin-bottom: 0;
+      }
+
+      span {
+        margin-right: 1rem;
+        color: $color-secondary;
+
+        // background-color: chocolate;
+      }
+
+      .social-links {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+
+        // background-color: blueviolet;
+
+        li {
+          cursor: pointer;
+          transition: transform 0.2s;
+
+          // background-color: red;
+
+          img {
+            height: 1.6rem;
+          }
+
+          &:hover {
+            transform: scale(1.2);
+          }
+
+          &:not(:last-child) {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  // - CONTACT US
+  &__contact {
+    font-size: 1.3rem;
+    // background-color: rgb(109, 143, 109);
+
+    @include respond(tab-port) {
+      font-size: 1.5rem;
+    }
+
+    .links-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 4rem;
+      margin-bottom: 1rem;
+      font-size: inherit;
+      color: $color-secondary;
+
+      // background-color: teal;
+    }
+
+    .contact-list {
+      list-style-type: none;
+      // background-color: saddlebrown;
+
+      li {
+        display: flex;
+        margin-bottom: 2.4rem;
+        font-size: inherit;
+        line-height: 1.5;
+
+        // background-color: yellow;
+
+        img {
+          align-self: flex-start;
+          width: 1.1rem;
+          height: 1.1rem;
+          margin-right: 1rem;
+          margin-top: 0.3rem;
+
+          // background-color: blue;
+        }
+
+        // p {
+        //   background-color: gray;
+        // }
+      }
+    }
+  }
+}
+
+.copyright {
+  font-size: 1.3rem;
+  text-align: center;
+
+  // background-color: purple;
+
+  @include respond(tab-port) {
+    font-size: 1.5rem;
+  }
+}

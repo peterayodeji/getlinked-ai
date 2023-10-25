@@ -1,21 +1,19 @@
 .container {
   width: 100%;
-  padding: 0 12rem;
+  padding-inline: 12rem;
   border-bottom: 1px solid $color-grey-dark-3;
-
-  background-color: $color-primary;
+  // background-color: $color-primary;
 
   @include respond(tab-land) {
-    padding: 0 7rem;
-    // padding: 0 6.4rem;
+    padding-inline: 7rem;
   }
 
   @include respond(tab-port) {
-    padding: 0 4rem;
+    padding-inline: 4rem;
   }
 
   @include respond(phone-md) {
-    padding: 0 2rem;
+    padding-inline: 2rem;
   }
 }
 

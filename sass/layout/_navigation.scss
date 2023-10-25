@@ -19,16 +19,8 @@
     padding-inline: 4rem;
   }
 
-  &__logo {
+  .logo {
     font-size: 3.6rem;
-    font-weight: 700;
-    font-family: "Clash Display", sans-serif;
-
-    // background-color: lavender;
-
-    span {
-      color: $color-secondary;
-    }
   }
 
   &__links {
