@@ -140,33 +140,6 @@
 
         // background-color: chocolate;
       }
-
-      .social-links {
-        display: flex;
-        align-items: center;
-        list-style-type: none;
-
-        // background-color: blueviolet;
-
-        li {
-          cursor: pointer;
-          transition: transform 0.2s;
-
-          // background-color: red;
-
-          img {
-            height: 1.6rem;
-          }
-
-          &:hover {
-            transform: scale(1.2);
-          }
-
-          &:not(:last-child) {
-            margin-right: 1rem;
-          }
-        }
-      }
     }
   }
 

@@ -1,0 +1,219 @@
+.section-contact {
+  width: 100%;
+  padding-block: 8rem;
+  background-color: $color-primary;
+
+  // background-color: goldenrod;
+
+  @include respond(tab-port-md) {
+    padding-block: 6rem;
+  }
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 6rem;
+  background-color: $color-primary;
+
+  // background-color: cornflowerblue;
+
+  @include respond(tab-port) {
+    padding-inline: 4rem;
+  }
+
+  @include respond(tab-port-md) {
+    padding-inline: 0;
+  }
+
+  &__info {
+    flex: 0 0 45%;
+    align-self: flex-start;
+
+    // background-color: rgb(88, 88, 149);
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  .info {
+    &__heading {
+      font-family: "Clash Display", sans-serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-top: 5rem;
+      margin-bottom: 2rem;
+      color: $color-secondary;
+
+      // background-color: brown;
+    }
+
+    &__location {
+      margin-top: -0.5rem;
+    }
+
+    &__phone-no {
+      margin-top: -0.5rem;
+    }
+
+    &__work-hours {
+      margin-bottom: 3rem;
+    }
+
+    &__social {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      // background-color: orange;
+
+      span {
+        margin-bottom: 1rem;
+        color: $color-secondary;
+
+        // background-color: wheat;
+      }
+    }
+  }
+
+  .form {
+    flex: 0 0 55%;
+    padding-inline: 8rem;
+    padding-block: 6rem 4rem;
+    border-radius: 1.2rem;
+    background-color: rgba(28, 18, 53, 0.5);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+
+    // background-color: rgb(14, 64, 64);
+    // background-color: #1c1235;
+
+    @include respond(tab-port-md) {
+      flex: 0 0 52%;
+    }
+
+    @include respond(tab-port) {
+      padding-inline: 4rem;
+    }
+
+    @include respond(phone) {
+      flex: 1;
+      padding-block: 0;
+      padding-inline: 4rem;
+      background-color: $color-primary;
+      box-shadow: none;
+    }
+
+    @include respond(phone-md) {
+      padding-inline: 2rem;
+    }
+
+    &__heading {
+      font-family: "Clash Display", sans-serif;
+      font-size: 1.8rem;
+      line-height: 1.4;
+      color: $color-secondary;
+      margin-bottom: 2rem;
+
+      // background-color: orange;
+
+      @include respond(tab-port) {
+        font-size: 2rem;
+      }
+    }
+
+    &__intro {
+      display: none;
+
+      @include respond(phone) {
+        display: block;
+      }
+    }
+
+    &__inputs {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2.8rem;
+
+      // background-color: $color-primary;
+
+      input,
+      textarea {
+        display: block;
+        padding: 10px 12px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        background-color: transparent;
+
+        @include respond(phone) {
+          background-color: rgba(28, 18, 53, 0.3);
+        }
+
+        &::placeholder {
+          font-family: "Montserrat", sans-serif;
+          color: #bbb;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 2.8rem;
+        }
+      }
+
+      textarea {
+        height: 10rem;
+        resize: vertical;
+
+        @include respond(tab-port-md) {
+          height: 15rem;
+        }
+      }
+    }
+
+    &__submit {
+      display: block;
+      margin-inline: auto;
+      padding: 1.2rem 4.3rem;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $color-white;
+      border: none;
+      border-radius: 3px;
+      background-image: linear-gradient(
+        to right,
+        $color-tertiary,
+        $color-secondary-accent
+      );
+
+      @include respond(tab-port) {
+        font-size: 1.8rem;
+      }
+
+      @include respond(phone) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    &__social {
+      display: none;
+
+      span {
+        margin-bottom: 1rem;
+        color: $color-secondary;
+
+        // background-color: wheat;
+      }
+
+      @include respond(phone) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        // background-color: red;
+      }
+    }
+  }
+}
