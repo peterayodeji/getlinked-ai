@@ -1,5 +1,3 @@
-console.log("hey");
-
 // # SELECT BOX
 const selectBoxes = document.querySelectorAll(".custom-select");
 
