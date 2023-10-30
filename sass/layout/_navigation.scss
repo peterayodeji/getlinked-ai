@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 10rem;
   background-color: $color-primary;
   border-bottom: 1px solid $color-grey-dark-3;
 
@@ -18,6 +19,10 @@
   @include respond(tab-port) {
     padding-inline: 4rem;
   }
+
+  // @include respond(phone) {
+  //   height: 9rem;
+  // }
 
   .logo {
     font-size: 3.6rem;
@@ -121,4 +126,27 @@
       z-index: 999;
     }
   }
+}
+
+// - STICKY NAVIGATION
+.sticky .nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 156rem;
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+
+  // background-color: rgba(255, 255, 255, 0.97);
+}
+
+.sticky .header {
+  @include respond(tab-port-md) {
+    margin-top: 10rem;
+  }
+
+  // @include respond(phone) {
+  //   margin-top: 9rem;
+  // }
 }
