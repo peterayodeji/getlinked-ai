@@ -1,0 +1,299 @@
+.section-register {
+  width: 100%;
+  padding-block: 8rem;
+  background-color: $color-primary;
+
+  // background-color: teal;
+
+  @media only screen and (max-width: 71.875em) {
+    padding-inline: 16rem;
+  }
+
+  @include respond(tab-port) {
+    padding-inline: 10rem;
+  }
+
+  @include respond(tab-port-md) {
+    padding-block: 6rem;
+    padding-inline: 4rem;
+  }
+
+  @media only screen and (max-width: 40.625em) {
+    padding-inline: 2rem;
+  }
+
+  @include respond(phone) {
+    padding-inline: 4rem;
+  }
+
+  @include respond(phone-md) {
+    padding-inline: 2rem;
+  }
+}
+
+.register {
+  display: flex;
+  align-items: flex-start;
+
+  // background-color: goldenrod;
+
+  &__img {
+    flex: 0 0 45%;
+    // background-color: pink;
+
+    @media only screen and (max-width: 71.875em) {
+      display: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+
+      // background-color: green;
+    }
+  }
+
+  &__form {
+    flex: 0 0 55%;
+    padding-block: 6rem 4rem;
+    padding-inline: 4rem;
+    border-radius: 1.4rem;
+    background-color: rgba(28, 18, 53, 0.5);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+
+    // background-color: rgb(43, 43, 81);
+
+    @include respond(tab-land) {
+      padding-block: 4rem;
+    }
+
+    @media only screen and (max-width: 71.875em) {
+      flex: 1;
+      padding-block: 6rem 4rem;
+      padding-inline: 8rem;
+    }
+
+    @include respond(tab-port) {
+      padding-inline: 6rem;
+    }
+
+    @include respond(tab-port-md) {
+      padding-inline: 4rem;
+    }
+
+    @include respond(phone) {
+      padding-block: 0 2rem;
+      padding-inline: 0;
+      background-color: $color-primary;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 2.5rem;
+    margin-left: 3px;
+    font-family: "Clash Display", sans-serif;
+    font-size: 2.6rem;
+    color: $color-secondary;
+
+    // background-color: gold;
+
+    @media only screen and (max-width: 71.875em) {
+      font-size: 3rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__form-img {
+    display: none;
+    // background-color: orangered;
+
+    @media only screen and (max-width: 71.875em) {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__movement-call {
+    display: flex;
+    margin-left: 3px;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+
+    // background-color: #391a1a;
+
+    @media only screen and (max-width: 75em) {
+      font-size: 1.6rem;
+    }
+
+    @include respond(tab-port) {
+      margin-bottom: 2.4rem;
+      font-size: 1.8rem;
+    }
+  }
+
+  &__intro {
+    position: relative;
+    display: inline-block;
+    margin-right: 2rem;
+
+    // background-color: orange;
+  }
+
+  &__movement {
+    position: relative;
+    width: 10rem;
+    background-image: url(/img/pathway-line.png);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: contain;
+
+    // background-color: rgb(21, 56, 21);
+
+    &::after {
+      position: absolute;
+      bottom: 1px;
+      left: 48%;
+      display: block;
+      content: "";
+      width: 25px;
+      height: 25px;
+      background-image: url(/img/man-walking.png);
+      background-repeat: no-repeat;
+      background-position: 0 100%;
+      background-size: contain;
+
+      // background-color: red;
+    }
+
+    &::before {
+      position: absolute;
+      bottom: 1px;
+      left: 28%;
+      display: block;
+      content: "";
+      width: 25px;
+      height: 20px;
+      background-image: url(/img/woman-walking.png);
+      background-repeat: no-repeat;
+      background-position: 0 100%;
+      background-size: contain;
+
+      // background-color: greenyellow;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 3px;
+    margin-bottom: 2rem;
+
+    // background-color: green;
+  }
+
+  &__form-inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    // background-color: tomato;
+
+    @include respond(phone) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__form-input {
+    // background-color: rgb(116, 17, 116);
+
+    label {
+      display: inline-block;
+      margin-left: 3px;
+      // background-color: red;
+
+      &.paragraph {
+        margin-bottom: 5px;
+      }
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 10px 12px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      color: #fff;
+      border: 1px solid #fff;
+      border-radius: 3px;
+      background-color: transparent;
+
+      &::placeholder {
+        font-family: "Montserrat", sans-serif;
+        font-size: 13px;
+        color: #bbb;
+      }
+
+      @include respond(phone) {
+        background-color: rgba(28, 18, 53, 0.5);
+      }
+    }
+  }
+
+  &__review {
+    font-size: 1.3rem;
+    line-height: 1.3;
+    color: $color-tertiary;
+    margin-bottom: 2rem;
+
+    @include respond(tab-port) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    padding: 1.2rem 4.3rem;
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $color-white;
+    border: none;
+    border-radius: 3px;
+    background-image: linear-gradient(
+      to right,
+      $color-tertiary,
+      $color-secondary-accent
+    );
+
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+    }
+
+    @include respond(phone) {
+      width: auto;
+      margin-inline: auto;
+      margin-top: 2.5rem;
+    }
+
+    &-register {
+      display: inline-block;
+
+      @include respond(phone) {
+        display: none;
+      }
+    }
+
+    &-submit {
+      display: none;
+
+      @include respond(phone) {
+        display: inline-block;
+      }
+    }
+  }
+}

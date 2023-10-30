@@ -1,0 +1,86 @@
+// - CUSTOMIZED SELECTBOX
+.custom-select {
+  position: relative;
+  border: 1px solid #fff;
+  border-radius: 3px;
+
+  // background-color: red;
+}
+
+.custom-select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: transparent;
+
+  // background-color: goldenrod;
+
+  @include respond(phone) {
+    background-color: rgba(24, 16, 47, 1);
+    background-clip: padding-box;
+  }
+}
+
+// - arrow down
+.select-selected::after {
+  position: absolute;
+  content: "";
+  top: 12px;
+  right: 10px;
+  display: inline-block;
+  padding: 3px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+  // background-color: green;
+}
+
+// - arrow up
+.select-selected.select-arrow-active::after {
+  top: 16px;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.select-items div,
+.select-selected {
+  padding: 10px 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.3) transparent;
+  cursor: pointer;
+
+  // background-color: goldenrod;
+}
+
+.select-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  z-index: 99;
+
+  // - Noted for final color aligning
+  background-color: rgba(24, 16, 47, 1);
+
+  // background-color: gray;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: $color-primary;
+
+  // background-color: rgba(0, 0, 0, 0.3);
+  // background-color: brown;
+}
