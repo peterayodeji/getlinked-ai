@@ -5,6 +5,16 @@
 
   // background-color: lavender;
 
+  a {
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
   span {
     color: $color-secondary;
   }
