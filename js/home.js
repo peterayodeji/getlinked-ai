@@ -1,3 +1,5 @@
+"use strict";
+
 // # Sticky Navigation
 let isIntersecting = true;
 
