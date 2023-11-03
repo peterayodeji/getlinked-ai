@@ -8,10 +8,10 @@ window.addEventListener("scroll", function () {
 
   if (scrollTop > lastScrollTop) {
     // * User is scrolling down
-    if (!isIntersecting) document.body.classList.add("sticky");
+    if (!isIntersecting) document.body.classList.remove("sticky");
   } else {
     // * User is scrolling up
-    if (!isIntersecting) document.body.classList.remove("sticky");
+    if (!isIntersecting) document.body.classList.add("sticky");
   }
 
   lastScrollTop = scrollTop;
@@ -21,7 +21,7 @@ window.addEventListener("scroll", function () {
 
 const sectionHeaderEl = document.querySelector(".header");
 const navHeight = document.querySelector(".nav").getBoundingClientRect().height;
-console.log(navHeight);
+// console.log(navHeight);
 
 const obs = new IntersectionObserver(
   function (entries) {
@@ -59,4 +59,41 @@ toggles.forEach((toggle) => {
 
     toggle.closest(".faq-box").classList.toggle("active");
   });
+});
+
+// # Reveal sections
+// const navLinksContainer = document.querySelector(".nav__links");
+// const navLinks = navLinksContainer.querySelectorAll(".link");
+// console.log(navLinks);
+
+const allSections = document.querySelectorAll(".section");
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove("section--hidden");
+  observer.unobserve(entry.target);
+
+  // Remove the "active-link" class from all links
+  // navLinks.forEach((link) => {
+  //   const targetId = link.getAttribute("href").substring(1);
+
+  //   if (document.getElementById(targetId) === entry.target) {
+  //     link.classList.add("active");
+  //   } else {
+  //     link.classList.remove("active");
+  //   }
+  // });
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add("section--hidden");
 });
