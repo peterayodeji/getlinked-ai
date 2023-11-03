@@ -46,8 +46,8 @@ allLinks.forEach(function (link) {
       navEl.classList.toggle("nav-open");
 
       // Remove the "active-link" class from all links
-      // navLinks.forEach((ll) => {
-      //   ll.classList.remove("active");
+      // navLinks.forEach((navLink) => {
+      //   navLink.classList.remove("active");
       // });
 
       // Add the "active-link" class to the clicked link

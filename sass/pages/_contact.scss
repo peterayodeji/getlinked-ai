@@ -186,6 +186,7 @@
         $color-tertiary,
         $color-secondary-accent
       );
+      cursor: pointer;
 
       @include respond(tab-port) {
         font-size: 1.8rem;
@@ -193,6 +194,16 @@
 
       @include respond(phone) {
         margin-bottom: 4rem;
+      }
+
+      &:hover,
+      &:active {
+        background-image: linear-gradient(
+          to right,
+          $color-secondary-accent,
+          $color-tertiary
+        );
+        transition: all 0.2s;
       }
     }
 

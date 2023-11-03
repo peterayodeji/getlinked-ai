@@ -9,5 +9,26 @@
   &:hover,
   &:active {
     color: $color-secondary;
+    transition: all 0.2s;
+  }
+}
+
+.link.active {
+  &:link,
+  &:visited {
+    background-image: linear-gradient(
+      to right,
+      $color-secondary-accent,
+      $color-tertiary
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  &:hover,
+  &:active {
+    color: $color-secondary;
+    transition: all 0.2s;
   }
 }
