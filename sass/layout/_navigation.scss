@@ -80,26 +80,38 @@
   // - MOBILE NAVIGATION STYLING
   &__mobile {
     position: absolute;
-    top: 3rem;
+    top: 4rem;
     right: 4rem;
     display: none;
-    width: 3.4rem;
-    height: 3.4rem;
+    border: none;
+    background: none;
+    cursor: pointer;
 
     // background-color: violet;
 
     @include respond(tab-port-md) {
-      display: block;
+      display: flex;
+    }
+
+    @include respond(phone-md) {
+      top: 4rem;
+      right: 2rem;
     }
   }
 
   &__icon {
-    // - SVG icon styling
-    width: 100%;
-    height: 100%;
+    // background-color: blueviolet;
+
+    &[name="menu-outline"] {
+      width: 4rem;
+      height: 4rem;
+    }
 
     &[name="close-outline"] {
       display: none;
+      width: 3.4rem;
+      height: 3.4rem;
+      margin: 0.5rem;
     }
   }
 
@@ -124,6 +136,14 @@
     .nav__mobile {
       position: fixed;
       z-index: 999;
+
+      // - create border with gradient
+      border-radius: 50%;
+      border: 2px solid transparent;
+      background-image: linear-gradient($color-primary, $color-primary),
+        linear-gradient(315deg, $color-secondary-accent, $color-tertiary);
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
     }
   }
 }
