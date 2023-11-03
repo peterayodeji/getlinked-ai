@@ -40,5 +40,18 @@ allLinks.forEach(function (link) {
         behavior: "smooth",
       });
     }
+
+    // * Close mobile navigation
+    if (link.closest(".nav__links")) {
+      navEl.classList.toggle("nav-open");
+
+      // Remove the "active-link" class from all links
+      // navLinks.forEach((ll) => {
+      //   ll.classList.remove("active");
+      // });
+
+      // Add the "active-link" class to the clicked link
+      // link.classList.add("active");
+    }
   });
 });
